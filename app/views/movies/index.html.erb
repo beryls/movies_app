@@ -1,0 +1,20 @@
+<h1>Welcome to my movies site!</h1>
+
+<h3>Search for a movie here.</h3>
+
+<form action="/movies/search" method="get">
+  <input type="text" name="title">
+  <button>Search</button>
+</form>
+
+<% if @searched.nil? == false %>
+  <% @searched.each do |movie| %>
+    <%= movie.title %>
+  <% end %>
+<% end %>
+
+<h3>Saved movies</h3>
+
+<% if @movies.present? %>
+  <%= render @movies %>
+<% end %>
