@@ -1,6 +1,7 @@
 MoviesApp::Application.routes.draw do
   root :to => 'welcome#index', as: 'home'
   get '/movies/search' => 'movies#search', as: 'movies_search'
+  post '/movies/'
   resources :movies
   # The priority is based upon order of creation:
   # first created -> highest priority.

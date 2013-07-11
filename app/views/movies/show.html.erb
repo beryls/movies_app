@@ -4,3 +4,5 @@
 <p>Plot: <%= @movie.plot %></p>
 <p>MPAA Rating: <%= @movie.mpaa_rating %></p>
 <p>IMDB Rating: <%= @movie.rating %></p>
+
+<%= button_to "Add movie to database", add_movie_path(title: @movie.title, year: @movie.year, plot: @movie.plot, mpaa_rating: @movie.mpaa_rating, rating: 50) %>
