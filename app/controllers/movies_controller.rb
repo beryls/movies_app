@@ -25,19 +25,7 @@ class MoviesController < ApplicationController
     movie.year = query.year
     movie.plot = query.plot
     movie.mpaa_rating = query.mpaa_rating
-    movie.rating = 50
-    movie.save
-    redirect_to '/movies'
-  end
-
-  def fave
-    query = Imdb::Movie.new(params[:id])
-    movie = Movie.new()
-    movie.title = query.title
-    movie.year = query.year
-    movie.plot = query.plot
-    movie.mpaa_rating = query.mpaa_rating
-    movie.rating = 100
+    movie.rating = params[:rating]
     movie.save
     redirect_to '/movies'
   end

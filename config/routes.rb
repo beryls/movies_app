@@ -3,7 +3,6 @@ MoviesApp::Application.routes.draw do
   get '/movies/search' => 'movies#search', as: 'movies_search'
   get '/movies/:id/details' => 'movies#details', as: 'details'
   post '/movies/:id/save' => 'movies#save', as: 'save_movie'
-  post '/movies/:id/fave' => 'movies#fave', as: 'fave_movie'
   resources :movies
   # The priority is based upon order of creation:
   # first created -> highest priority.

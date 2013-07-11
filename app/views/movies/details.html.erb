@@ -5,6 +5,6 @@
 <p>MPAA Rating: <%= @movie.mpaa_rating %></p>
 <p>IMDB Rating: <%= @movie.rating %></p>
 
-<%= button_to "Save movie", save_movie_path(@movie.id) %>
+<%= button_to "Save movie", save_movie_path(@movie.id, rating: 50) %>
 
-<%= button_to "Fave movie", fave_movie_path(@movie.id) %>
+<%= button_to "Fave movie", save_movie_path(@movie.id, rating: 100) %>
