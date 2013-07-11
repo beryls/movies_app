@@ -1,0 +1,10 @@
+<h1><%= @movie.title %></h1>
+
+<p>Year: <%= @movie.year %></p>
+<p>Plot: <%= @movie.plot %></p>
+<p>MPAA Rating: <%= @movie.mpaa_rating %></p>
+<p>IMDB Rating: <%= @movie.rating %></p>
+
+<%= button_to "Save movie", save_movie_path(@movie.id) %>
+
+<%= button_to "Fave movie", fave_movie_path(@movie.id) %>

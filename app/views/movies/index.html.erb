@@ -9,12 +9,18 @@
 
 <% if @searched.present? %>
   <% @searched.each do |movie| %>
-    <%= link_to(movie.title, movie_path(movie.id)) %><br>
+    <%= link_to(movie.title, details_path(movie.id)) %><br>
   <% end %>
+<% end %>
+
+<h3>Favorited movies</h3>
+
+<% if @faves.present? %>
+  <%= render @faves %>
 <% end %>
 
 <h3>Saved movies</h3>
 
-<% if @movies.present? %>
-  <%= render @movies %>
+<% if @saves.present? %>
+  <%= render @saves %>
 <% end %>
