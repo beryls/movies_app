@@ -5,7 +5,7 @@ class CreateMoviesTable < ActiveRecord::Migration
       t.integer :year
       t.string :plot
       t.string :mpaa_rating
-      t.integer :quality_rating
+      t.integer :quality
     end
   end
 
