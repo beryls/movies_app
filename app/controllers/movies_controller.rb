@@ -5,7 +5,6 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all
     @faves = Movie.where(rating: 100)
     @saves = Movie.where('rating < ?', 100)
   end
@@ -20,7 +19,8 @@ class MoviesController < ApplicationController
 
   def save
     query = Imdb::Movie.new(params[:id])
-    movie = Movie.new()
+    movie = Movie.new(title: query.title, year: query.year,
+      plot: query.plot, mpaa_rating: query.mpaa_rating, rating: params[:rating])
     movie.title = query.title
     movie.year = query.year
     movie.plot = query.plot

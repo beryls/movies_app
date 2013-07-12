@@ -13,14 +13,12 @@
   <% end %>
 <% end %>
 
-<h3>Favorited movies</h3>
-
 <% if @faves.present? %>
+  <h3>Favorited movies</h3>
   <%= render @faves %>
 <% end %>
 
-<h3>Saved movies</h3>
-
 <% if @saves.present? %>
+  <h3>Saved movies</h3>
   <%= render @saves %>
 <% end %>
