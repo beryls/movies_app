@@ -5,8 +5,8 @@
 <p>MPAA Rating: <%= @movie.mpaa_rating %></p>
 <p>My Rating: <%= number_to_percentage(@movie.rating) %></p>
 
-<%= button_to "Vote up", change_rating_path(@movie.id, pref: up) %>
-<%= button_to "Vote down", change_rating_path(@movie.id, pref: down) %>
-<%= button_to "Fave", change_rating_path(@movie.id, pref: fave) %>
+<%= button_to "Vote up", change_rating_path(@movie.id, pref: 'up') %>
+<%= button_to "Vote down", change_rating_path(@movie.id, pref: 'down') %>
+<%= button_to "Fave", change_rating_path(@movie.id, pref: 'fave') %>
 
 
