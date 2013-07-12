@@ -3,9 +3,10 @@
 <img src="<%= @movie.poster %>" />
 
 <p>Year: <%= @movie.year %></p>
-<p>Plot: <%= @movie.plot %></p>
+<p>Plot: <%= truncate(@movie.plot, length: 50, omission: "...gahh") %></p>
 <p>MPAA Rating: <%= @movie.mpaa_rating %></p>
-<p>IMDB Rating: <%= @movie.rating %></p>
+<p>IMDB Rating: <%= number_to_percentage(@movie.rating * 10) %></p>
+<p>Duration: <%= @movie.length %></p>
 
 <%= button_to "Save movie", save_movie_path(@movie.id, rating: 50) %>
 

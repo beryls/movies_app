@@ -29,4 +29,17 @@ class MoviesController < ApplicationController
     movie.save
     redirect_to '/movies'
   end
+
+  def change_rating
+    movie = Movie.find(params[:id])
+    case pref
+    when up
+      movie.rating += 1
+    when down
+      movie.rating -= 1
+    when fave
+      movie.rating = 100
+    end
+    movie.save
+  end
 end
