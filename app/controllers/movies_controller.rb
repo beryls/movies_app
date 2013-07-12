@@ -34,7 +34,7 @@ class MoviesController < ApplicationController
     movie = Movie.find(params[:id])
     case params[:pref]
     when 'up'
-      if movie.rating <100
+      if movie.rating < 100
         movie.rating += 1
       end
     when 'down'
